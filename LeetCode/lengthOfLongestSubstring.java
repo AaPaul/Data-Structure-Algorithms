@@ -6,6 +6,7 @@
 *其实第二种方法不需要hashmap也能进行，第一次选择第一种方法进行解答
 */
 
+// The result is that this programe is too slow.
 import java.util.HashMap;
 
 class Solution {
@@ -33,8 +34,8 @@ class Solution {
     }
 }
 
-// The result is that this programe is too slow.
 
+//程序中注释的部分是因为我没有考虑到新的count有可能会比之前保存的maxNum小，所以出错了。同样的，这个程序也运行很慢
 import java.util.HashMap;
 
 class Solution {
@@ -65,4 +66,21 @@ class Solution {
     }
 }
 
-//程序中注释的部分是因为我没有考虑到新的count有可能会比之前保存的maxNum小，所以出错了。同样的，这个程序也运行很慢
+// The official solution
+public class Solution {
+    public int lengthOfLongestSubstring(String s) {
+        int n = s.length(), ans = 0;
+        // Here this solution makrs the sequence number which is the flag to decide whether the loop should restart from next character.
+        Map<Character, Integer> map = new HashMap<>(); // current index of character
+        // try to extend the range [i, j]
+        for (int j = 0, i = 0; j < n; j++) {
+            if (map.containsKey(s.charAt(j))) {
+                i = Math.max(map.get(s.charAt(j)), i);
+            }
+            ans = Math.max(ans, j - i + 1);
+            map.put(s.charAt(j), j + 1);
+        }
+        return ans;
+    }
+}
+// The whole program just uses one hashmap while my onw ways create and clean hashmap again and again which is very time-consuming.

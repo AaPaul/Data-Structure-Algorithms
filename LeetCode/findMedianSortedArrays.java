@@ -48,3 +48,11 @@ class Solution {
         if (i+1 < right) quickSort(a, i+1, right);
     }
 }
+
+
+
+// Some summerazition of quick sort:
+// 1. 如果选择左基数，必须要从右边开始循环。否则逻辑会不对，尽管可以更改使其正确，但也增加了代码复杂度。
+
+// Referrence
+// https://blog.csdn.net/csdnqixiaoxin/article/details/89429528

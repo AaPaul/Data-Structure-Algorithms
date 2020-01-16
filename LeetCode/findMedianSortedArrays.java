@@ -1,3 +1,5 @@
+//Actually, it's searching problem about  binaray searching.
+
 // My own opinion about this problem is to use quick sort and the time complexity is n(logn) where n is the sum of two arrays.
 // However, I think it may exceed the time complexity constrain (log(m+n)). So maybe I need to set a specific function to judge
 // if the original array is ordered. The first way successfully passes the test case while I didn't consider the minus test case.

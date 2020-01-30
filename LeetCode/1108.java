@@ -33,3 +33,11 @@ class Solution2 {
         return sb.toString();
     }
 }
+
+
+//python3 
+/*
+class Solution:
+    def defangIPaddr(self, address: str) -> str:
+        return "[.]".join(address.split('.'))
+*/

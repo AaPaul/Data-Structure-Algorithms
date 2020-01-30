@@ -36,6 +36,8 @@ class Solution2 {
 
 
 //python3 
+// string.join 是在每个字符后面添加该string，如果使用split函数将目标字符串分部分，就可以得到结果, 还可以在splite后添加[:-1]表示分割到最后一个部分前停止
+
 /*
 class Solution:
     def defangIPaddr(self, address: str) -> str:

@@ -46,7 +46,7 @@ class Solution:
     def decompressRLElist(self, nums: List[int]) -> List[int]:
         comb = []
         i = 1
-        while i < len(nums):
+        while i < len(nums): # for i in range(0, len(nums), 2): range可以定义循环的步数增长大小
             lst = self.getList(nums[i-1], nums[i]) # 用self调用函数
             comb.extend(lst) # comb+=lst
             i = i+2

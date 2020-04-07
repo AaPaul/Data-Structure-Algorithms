@@ -71,3 +71,7 @@ start from 0, stop at 10 excluding 10, the step is 1
 range(10, 0, -1)
 start from 10, stop at 1, the step is -1.
 """
+
+# Reference
+# https://blog.csdn.net/liu2012huan/article/details/51296635
+# https://www.geeksforgeeks.org/maximum-subarray-sum-using-divide-and-conquer-algorithm/

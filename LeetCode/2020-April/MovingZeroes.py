@@ -30,8 +30,8 @@ class Solution:
         # return nums
 
 
-s1 = Solution()
+# s1 = Solution()
 # l = s1.moveZeroes([0, 0, 1])
-l = s1.moveZeroes([0])
+# l = s1.moveZeroes([0])
 # l = s1.moveZeroes([0, 0 , 0])
-print(l)
+# print(l)

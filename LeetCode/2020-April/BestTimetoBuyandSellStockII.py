@@ -23,6 +23,8 @@ class Solution:
             return maxtotal
 
         # Method 2
+        # The key point of this method is to calculate the difference between
+        # each pair of the consecutive peak and valley
         def calMax2(prices, start):
             maxtotal = 0
             count = 0

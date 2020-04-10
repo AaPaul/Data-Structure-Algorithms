@@ -50,3 +50,6 @@ s1 = Solution()
 # s1.maxProfit([7,1,5,3,6,4])
 # s1.maxProfit([5, 4, 3, 2, 1])
 s1.maxProfit([0, 1, 0, 0])
+
+# Reference
+# https://medium.com/@punitkmr/best-time-to-buy-and-sell-stock-ii-7826845144eb

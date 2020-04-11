@@ -1,4 +1,5 @@
 # Data-Structure-Algorithms
-to record my code in studying algorithms.
-Main language: Java, Python.
+To record my code in studying algorithms.
+Main language: Java, Python. \
+Platform: LeetCode
 

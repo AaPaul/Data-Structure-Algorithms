@@ -43,8 +43,12 @@ class Solution:
             r_diameter = diameter(node.right)
 
             return max(l_height + r_height + 1, max(l_diameter, r_diameter))
+
         print(diameter(root) - 1)
-        # return diameter(root) - 1
+        # if not root: # should consider the special case: []
+        #     return 0
+        # else:
+        #     return diameter(root) - 1
 
 
 lst = [4, 2, 5, 1, 3]
@@ -58,10 +62,18 @@ a.right = TreeNode(5)
 s1 = Solution()
 s1.diameterOfBinaryTree(tree)
 # Note:
-# 1. Create a tree
 """
-  2. The key point is that we need to understand the diameter is the number that is based on the height of the tree.
-  
+1. Create a tree
+
+2. The key point is that we need to understand the diameter is the number that is based on the height of the tree.
+
+3. Method 1: Using a variable to record the max diameter so that we do not need to visit another time to find the maximum diameter
+of the subnode
+
+4. Unfamiliar with the operation about the binary tree. Need more practise.
+
+5. If you face a question about a tree, just mock the process in runtime of the program manually which can help you further understand
+the mechanism.
 """
 # Reference
 # https://www.geeksforgeeks.org/diameter-of-a-binary-tree/

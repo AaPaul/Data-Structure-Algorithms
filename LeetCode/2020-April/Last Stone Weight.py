@@ -8,7 +8,7 @@ class Solution:
         # i = 0
         while len(stones_sorted) > 1:
             diff = stones_sorted[0] - stones_sorted[1]
-            stones_sorted.pop(0) # ATTENTION!
+            stones_sorted.pop(0)  # ATTENTION!
             stones_sorted.pop(0)
 
             if diff:
@@ -21,7 +21,7 @@ class Solution:
 
 
 s1 = Solution()
-ans = s1.lastStoneWeight([2,7,4,1,8,1])
+ans = s1.lastStoneWeight([2, 7, 4, 1, 8, 1])
 print(ans)
 
 """

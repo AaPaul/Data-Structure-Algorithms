@@ -3,7 +3,9 @@ from ipaddress import ip_address, IPv6Address
 # This question mainly requires us to know the lib named ipaddress which can help us directly figure out whether the str
 # is a IP or not and it can even give us which IP type it belongs to.
 # By the way, there are some other functions I learn from the question, like str.zfill(), str.isdecimal() and so on.
+
 class Solution(object):
+    # consider the blank, prefix 0 (ipv4), length. Note: 'G' is bigger than 'FFFF' while '000G' is smaller.
     def validIPAddress1(self, IP):
         """
         :type IP: str

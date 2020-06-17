@@ -3,6 +3,7 @@ import random
 # picking with weight. Therefore, it is not a simple probability question. What we need to do is to transfer it as a
 # cumulative probability distribution function. Then we use random numbers to perform a binary search. This question
 # revealed that I am not familiar with binary search as well
+# Note: The difference between 2 binary search methods.
 class Solution:
 
     def __init__(self, w):

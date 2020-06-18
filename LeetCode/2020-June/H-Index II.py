@@ -27,7 +27,10 @@ class Solution(object):
 
         return count
 
+
 s1 = Solution()
 # x = s1.hIndex([0,1,3,5,6])
-x = s1.hIndex([1,4,7,9])
+x = s1.hIndex([1, 4, 7, 9])
 print(x)
+
+# Range() reversed order

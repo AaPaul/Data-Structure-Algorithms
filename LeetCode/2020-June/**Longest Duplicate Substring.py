@@ -35,3 +35,6 @@ class Solution:
 
 s1 = Solution()
 test = s1.longestDupSubstring('banana')
+
+# Reference: https://blog.csdn.net/lemonmillie/article/details/90182133
+# https://blog.csdn.net/weixin_44110891/article/details/106878093?%3E

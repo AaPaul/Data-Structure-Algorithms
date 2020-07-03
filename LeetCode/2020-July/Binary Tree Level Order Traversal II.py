@@ -1,3 +1,8 @@
+# A classic BFS question.
+# 层序遍历的实现
+# difference between res.reversed() and list(reversed(res))
+# the second one of reversing method is based on rows
+
 # Definition for a binary tree node.
 from typing import List
 class TreeNode:
@@ -14,8 +19,12 @@ class Solution:
         res = []
         queue.append(root)
         while queue:
+            # the loop in list
             res.append([q.val for q in queue])
             queue = [kid for q in queue for kid in (q.left, q.right) if kid]
+
+
+
             # node = queue.pop()
             # if not node.val in searched:
             #     searched.append(node.val)
@@ -28,6 +37,8 @@ class Solution:
             # if temp:
             #     res.insert(0, temp)
         return list(reversed(res))
+        # res.reverse()
+        # return res
 
 
 def main():

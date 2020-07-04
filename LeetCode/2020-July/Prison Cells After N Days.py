@@ -1,4 +1,8 @@
+# iteration and recursive are both a kind of loop. However, in the case with a big number of loop
+# the efficiency of iteration must be higher than the latter one.
+
 from typing import List
+
 
 class Solution:
     def change(self, cells: List[int]) -> List[int]:

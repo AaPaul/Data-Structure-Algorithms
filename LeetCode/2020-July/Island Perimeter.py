@@ -1,3 +1,5 @@
+# The DFS works well with Java while in python version I don't know why there always some problems
+
 from typing import List
 class Solution:
 

@@ -46,3 +46,7 @@ class Solution:
         #             temp.append(j)
         #         sum += j
         #         if
+
+
+# How to use hashMap
+# Why there would be redundency if use the comment part?

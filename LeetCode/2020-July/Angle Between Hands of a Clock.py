@@ -6,4 +6,6 @@ class Solution:
         percentage = minutes/60
         ang_h = hour * ONE_QUARTER + ONE_QUARTER * percentage
 
-        res = ( 360-abs(ang_h-ang_m) if abs(ang_h-ang_m)>180 else abs(ang_h-ang_m))
+        res = (360-abs(ang_h-ang_m) if abs(ang_h-ang_m)>180 else abs(ang_h-ang_m))
+
+        return res

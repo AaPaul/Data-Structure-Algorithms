@@ -24,6 +24,19 @@ class Solution:
         else:
             return res
 
+    # This method use head Node to describe the case with null value in the list.
+    # Also, this method save the memory as it doesn't rebuild a list instead that
+    # it just drop the specific nodes.
+    def removeElements1(self, head, val):
+        dummy = ListNode(-1)
+        dummy.next = head
+        start = dummy
+        while start.next:
+            if start.next.val == val:
+                start.next = start.next.next
+            else:
+                start = start.next
+        return dummy.next
 
 s1 = Solution()
 # l = [1,2,6,3,4,5,6]

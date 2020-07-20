@@ -54,3 +54,7 @@ res1 = s1.removeElements(exa, 1)
 
 # For this example, we should pay attention on Null result.
 # Because the default setting of a List is ListNode(0) instead of NULL.
+
+# Meet a problem:
+# UnboundLocalError: local variable 'xxx' referenced before assignment
+# https://blog.csdn.net/asdfsadfasdfsa/article/details/90207739

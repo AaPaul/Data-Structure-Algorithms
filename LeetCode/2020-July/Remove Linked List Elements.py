@@ -1,0 +1,43 @@
+# Definition for singly-linked list.
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+class Solution:
+    def removeElements(self, head: ListNode, val: int) -> ListNode:
+        if not head:
+            return
+        res = ListNode()
+        first = 1
+        while head:
+            if head.val != val:
+                if first:
+                    res = ListNode(head.val)
+                    first = 0
+                    p = res
+                else:
+                    p.next = ListNode(head.val)
+                    p = p.next
+            head = head.next
+        if res.val==0:
+            return
+        else:
+            return res
+
+
+s1 = Solution()
+# l = [1,2,6,3,4,5,6]
+l = [1]
+first = 1
+for i in l:
+    if first:
+        exa = ListNode(val=i)
+        p = exa
+        first = 0
+    else:
+        p.next = ListNode(val=i)
+        p = p.next
+res1 = s1.removeElements(exa, 1)
+
+# For this example, we should pay attention on Null result.
+# Because the default setting of a List is ListNode(0) instead of NULL.

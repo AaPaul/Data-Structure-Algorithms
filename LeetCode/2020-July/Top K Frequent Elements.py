@@ -35,3 +35,26 @@ for key,value in items:
 
 # Reference
 # https://blog.csdn.net/wuguangbin1230/article/details/70174926
+
+class Solution:
+    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+        
+
+        # however, sorted takes O(nlogn)
+#         dic = {}
+#         for item in nums:
+#             dic[item] = dic.get(item, 0) + 1
+        
+#         arr = sorted(dic, key = dic.get,reverse = True)
+#         return arr[:k]    # top k elements in the array
+        freq_dict = collections.Counter(nums)
+    
+    # create a heap
+        heap = []
+    
+    # key: number in list; value: frequency
+        for key in freq_dict.keys():
+            heapq.heappush(heap, (freq_dict[key], key))
+            if len(heap) > k: heapq.heappop(heap)
+        return [heapq.heappop(heap)[1] for i in range(k)]
+ 

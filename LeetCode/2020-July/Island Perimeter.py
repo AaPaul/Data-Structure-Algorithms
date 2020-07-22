@@ -49,6 +49,7 @@ class Solution:
 
 
         # res = [[0] * len(grid[0])] * len(grid)
+        #  不能用这种创建列表，这是一种浅复制，当你给res[1][0]赋值时，res[2][0],res[3][0]会同时改变. 因为第二，三行都是对第一行的一个浅复制
         res = 0
         visted = [[0 for i in range(len(grid[0]))] for j in range(len(grid))]
         # res = DFS(grid,0,0)

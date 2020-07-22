@@ -3,7 +3,7 @@ class Solution:
         return pow(x,n)
 
 # Using bidichotomy (二分法) to calculate the number of multiplication.
-    def myPow2(sefl, x: float, n: int) -> float:
+    def myPow2(self, x: float, n: int) -> float:
         if n < 0:
             x = 1 / x
         n = abs(n)

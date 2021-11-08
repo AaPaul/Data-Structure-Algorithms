@@ -16,7 +16,7 @@ class Solution:
         return root.val + max(ls, rs)
     def maxPathSum(self, root: TreeNode) -> int:
         INT_MIN = -2**32
-        res = [-10^9]
+        res = [INT_MIN]
         self.maxSumUtil(root, res)
         return res[0]
 

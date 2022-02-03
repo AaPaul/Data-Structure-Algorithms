@@ -38,6 +38,16 @@ def t3(a, b):
     print(a)
 t3(315, 840)
 
-def sort1(strings):
-    for i in range(len(strings)):
-        for j in range(len())
+def getAns(num: int):
+    if num < 4:
+        return 1
+    dp = [0] * num
+    for i in range(4, n):
+        dp[i] = dp[i-1] + dp[i-4]
+    return dp[-1]
+    
+
+if __name__ == "__main__":
+    n = input()
+    for i in n:
+        print(getAns(int(i))

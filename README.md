@@ -10,7 +10,8 @@
   
 ### Main work
 - Follow [CyC2018/CS-Notes](https://github.com/CyC2018/CS-Notes) to solve coding problems in different types
-- Record the online assessments from different companies
+- Record Weekly contest in leetcode
+- Record the online assessments
 
   
   

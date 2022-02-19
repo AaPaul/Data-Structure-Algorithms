@@ -16,7 +16,8 @@
   
   
 ### Environment
-Main language: Python=3.7, C++ \
+Main language: Python=3.7 \
+Although there is no Java version and C++ version, I have tried different languages to implement the algorithm to keep my proficiency and sensitivity of Java and C++.
 Platform: [LeetCode](https://leetcode.com/problemset/all/), [Leetcode-CN](https://leetcode-cn.com/problemset/all/)
     
 ### Reference

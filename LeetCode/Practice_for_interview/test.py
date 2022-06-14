@@ -10,35 +10,35 @@
 
 from typing import List
 class Solution:
-    def successfulPairs(self, spells: List[int], potions: List[int], success: int) -> List[int]:
-        potions.sort()
-        def check(l, h, x):
-            while l < h:
-                mid = l + (h - l) // 2
-                if (x * potions[mid] < success):
-                    l = mid + 1
-                else:
-                    h = mid
-            return l
-        n = len(potions)
-        ans = []
-        for i in spells:
-            if i >= success:
-                ans.append(n)
+    def calculateTax(self, brackets: List[List[int]], income: int) -> float:
+        tax = 0.0
+        n = len(brackets)
+        i = 0
+        while income > 0 and i < n:
+            t = brackets[i][0]
+            p = brackets[i][1]
+            if i == 0:
+                if income < t:
+                    t = income
+                    income = 0
+                prev = t
             else:
-                pos = check(0, n-1, i)
-                if pos == n-1 and i * potions[pos] < success:
-                    ans.append(0)
+                if income > t:
+                    t = t - prev
+                    prev = t
                 else:
-                    ans.append(n - pos)
-        return ans
+                    t = income - prev
+                    income = 0
+                
+            tax += (t * p / 100.0)
+            i += 1
+        return tax
+            
+                
 
 
-
-
-spells=[3,1,2]
-potions=[8,5,8]
-success=16
+brackets=[[3,50],[7,10],[12,25]]
+income=10
 
 s = Solution()
-print(s.successfulPairs(spells, potions, success))
+print(s.calculateTax(brackets, income))

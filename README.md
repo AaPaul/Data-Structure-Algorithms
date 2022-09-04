@@ -9,6 +9,7 @@
 </div>
   
 ### Main work
+- Coding exercises for interviews
 - Follow [CyC2018/CS-Notes](https://github.com/CyC2018/CS-Notes) to solve coding problems in different types ([Solutions](https://github.com/AaPaul/Data-Structure-Algorithms/tree/master/LeetCode/Practice_for_interview))
 - Record Weekly contest in leetcode
 - Record the online assessments

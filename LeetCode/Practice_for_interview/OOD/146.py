@@ -1,5 +1,5 @@
-from heapq import heapify, heappush, heappushpop
-from typing import List
+# from heapq import heapify, heappush, heappushpop
+# from typing import List
 
 
 class DoubleLinkedListNode:
@@ -19,7 +19,7 @@ class LRUCache:
         self.head.next = self.tail
         self.tail.prev = self.head
     
-    def move_to_tail(self, node):
+    def move_to_tail2(self, node):
         # cut the original connection of node
         node.prev.next = node.next
         node.next.prev = node.prev
@@ -30,12 +30,21 @@ class LRUCache:
         node.next = self.tail
         self.tail.prev = node
             
+    def move_to_tail(self, node):
+        node.prev.next = node.next
+        node.next.prev = node.prev
+
+        node.next = self.tail
+        node.prev = self.tail.prev
+        self.tail.prev.next = node
+        self.tail.prev = node
+    
     def get(self, key:int):
         res = self.hashmap.get(key, -1)
         if res == -1:
             return res
         else:
-            # move this key to head
+            # move this key to tail (recently used)
             self.move_to_tail(res)
             return res.value
         
